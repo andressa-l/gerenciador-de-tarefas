@@ -1,11 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -13,46 +18,73 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="style.css" />
+
     <title>Gerenciador de Tarefas</title>
   </head>
 
   <body>
-    
     <div class="app">
       <main class="project">
         <div class="project-info">
-          <h1>Gerenciador de Tarefas</h1>
+          <h1 class="titulo-gerenciador">Gerenciador de Tarefas</h1>
           <div class="project-participants">
             <span></span>
             <span></span>
             <span></span>
-            <button class="project-participants__add">
-              Add Participante
-            </button>
+            <button class="project-participants__add">Add Participante</button>
           </div>
         </div>
 
-        <!-- <div class="card-body">
+        <div class="card-body">
           <h4 class="card-title">Adicione sua tarefa</h4>
-          <div class="add-items d-flex">
-            <input
-              type="text"
-              placeholder="Digite sua tarefa..."
-              class="form-control todo-list-input"
-              id="todo-list-input"
-            />
-            <button
-              class="add btn btn-primary font-weight-bold todo-list-add-btn"
-              onclick="addTarefa()"
-            >
-              Add
-            </button>
+          <div class="task" draggable="true">
+            <div class="task__tags">
+              <select id="dropdown" name="role" class="form-button task__tag task__tag--copyright" style="border: none; background-color: rgb(152, 175, 204);" required="">
+                <option disabled="" selected="" value="">Selecione</option>
+                <option value="student">DevOps</option>
+                <option value="job">Front-end</option>
+                <option value="learner">Back-end</option>
+              </select>
+              <button class="task__options">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+            <!-- <p>Konsep hero title yang menarik</p> -->
+            <div class="add-items d-flex">
+              <input
+                type="text"
+                placeholder="Digite sua tarefa e arraste..."
+                class="form-control todo-list-input"
+                id="todo-list-input"
+                style="border: none; outline: none"
+              />
+            </div>
+            <div class="task__stats">
+              <span
+                ><time datetime="2024-11-24T20:00:00"
+                  ><i class="fas fa-flag"></i>Hoje</time
+                ></span
+              >
+              <span><i class="fas fa-comment"></i>0</span>
+              <span><i class="fas fa-paperclip"></i>2</span>
+              <span class="task__owner"></span>
+            </div>
           </div>
+          <button
+            class="add btn btn-primary font-weight-bold todo-list-add-btn"
+            onclick="addTarefa()"
+          >
+            Add
+          </button>
           <div class="list-wrapper">
-            <ul class="d-flex flex-column-reverse todo-list" id="todo-list"></ul>
+            <ul
+              class="d-flex flex-column-reverse todo-list"
+              id="todo-list"
+            ></ul>
           </div>
-        </div> -->
+        </div>
 
         <div class="project-tasks">
           <div class="project-column">
@@ -154,8 +186,7 @@
 
             <div class="task" draggable="true">
               <div class="task__tags">
-                <span class="task__tag task__tag--illustration"
-                  >Back-end</span
+                <span class="task__tag task__tag--illustration">Back-end</span
                 ><button class="task__options">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
@@ -195,8 +226,7 @@
 
             <div class="task" draggable="true">
               <div class="task__tags">
-                <span class="task__tag task__tag--illustration"
-                  >Back-end</span
+                <span class="task__tag task__tag--illustration">Back-end</span
                 ><button class="task__options">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
@@ -262,8 +292,7 @@
             </div>
             <div class="task" draggable="true">
               <div class="task__tags">
-                <span class="task__tag task__tag--illustration"
-                  >Back-end</span
+                <span class="task__tag task__tag--illustration">Back-end</span
                 ><button class="task__options">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
@@ -291,8 +320,7 @@
 
             <div class="task" draggable="true">
               <div class="task__tags">
-                <span class="task__tag task__tag--illustration"
-                  >Back-end</span
+                <span class="task__tag task__tag--illustration">Back-end</span
                 ><button class="task__options">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
@@ -312,8 +340,7 @@
 
             <div class="task" draggable="true">
               <div class="task__tags">
-                <span class="task__tag task__tag--illustration"
-                  >Back-end</span
+                <span class="task__tag task__tag--illustration">Back-end</span
                 ><button class="task__options">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
@@ -421,14 +448,14 @@
         </div>
       </aside>
     </div>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
       integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
   </body>
-</html> 
+</html>

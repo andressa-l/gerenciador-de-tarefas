@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
 :root {
     --bg: #cad6e7;
     --header: #fbf4f6;
@@ -32,8 +34,11 @@ body {
     min-height: 100vh;
 }
 
-h1 {
-    font-size: 30px;
+.titulo-gerenciador {
+    font-family: 'Protest Riot', cursive;
+    font-size: 50px;
+    color: var(--text);
+    text-align: center;
 }
 
 .project {
@@ -300,6 +305,13 @@ h1 {
 .task-icon--edit,.todo-list-add-btn {
     background-color: #2d3363;
     border: none;
+}
+
+.add-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
 }
 
 @media only screen and (max-width: 1300px) {
